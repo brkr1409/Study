@@ -1,5 +1,5 @@
 /**
  * Created by w0wfa on 05.07.2016.
  */
-public class Cat {
+public class Cat{
 }
