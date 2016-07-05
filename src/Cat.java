@@ -1,13 +1,11 @@
-/**
- * Created by w0wfa on 05.07.2016.
- */
-public class Cat implements Animal{
+
+public class Cat implements Animal, Predator{
     int position=0;
-    int speed = 2;
+    int speed = 5;
     double weight = 4;
     @Override
     public int move() {
-        return position+=speed;
+        return position += speed;
     }
 
     @Override
@@ -23,5 +21,14 @@ public class Cat implements Animal{
     @Override
     public int getPosition() {
         return position;
+    }
+
+    @Override
+    public boolean consume(Animal a) {
+        if(getWeight()<a.getWeight())
+            return false;
+        else if (getWeight()>a.getWeight())
+            weight += (a.getWeight() * 0.2);
+            return  true;
     }
 }
