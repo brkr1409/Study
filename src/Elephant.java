@@ -1,5 +1,5 @@
 
-public class Elephant implements Animal {
+public class Elephant implements Animal  {
     int position=0;
     int speed = 3;
     double weight = 20;
