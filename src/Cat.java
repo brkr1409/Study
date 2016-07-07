@@ -1,29 +1,18 @@
 
-public class Cat implements Animal, Predator{
+public class Cat extends BaseAnimal{
     int position=0;
     int speed = 5;
     double weight = 4;
-    @Override
-    public int move() {
-        return position += speed;
+
+    public Cat(int pos, int spd, double wght, Animal aml) {
+        super(pos, spd, wght, aml);
     }
 
-    @Override
     public Animal reproduce() {
         return new Cat();
     }
 
-    @Override
-    public double getWeight() {
-        return weight;
-    }
 
-    @Override
-    public int getPosition() {
-        return position;
-    }
-
-    @Override
     public boolean consume(Animal a) {
         if(getWeight()<a.getWeight())
             return false;

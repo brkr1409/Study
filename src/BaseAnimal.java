@@ -1,12 +1,17 @@
 // как должен принимать класс BaseAnimal вес и скорость?
 // BaseAnimal сравнивает что-то или какая в нем "общая логика"
-abstract class BaseAnimal implements Animal, Predator{
+abstract class BaseAnimal implements Animal{
 
     private int position;
     private int speed;
     private double weight;
     private Animal animal;
-
+    public BaseAnimal(){
+        position = 0;
+        speed = 0;
+        weight = 0;
+        animal = null;
+    }
     public BaseAnimal(int pos, int spd, double wght, Animal aml){
         position = pos;
         speed = spd;
@@ -32,7 +37,7 @@ abstract class BaseAnimal implements Animal, Predator{
         return position;
     }
 
-    @Override
+
     public boolean consume(Animal a) {
         if(getWeight()<a.getWeight())
             return false;
