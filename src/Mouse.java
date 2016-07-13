@@ -4,11 +4,10 @@ public class Mouse extends BaseAnimal {
     int speed = 2;
     double weight = 2;
     private Mouse(){}
-    public Mouse(int pos, int spd, double wght, Animal aml) {
-        super(pos, spd, wght, aml);
+    public Mouse(int Speed, double Weight) {
+        super(Speed, Weight);
     }
     public Animal reproduce() {
-        Mouse m = new Mouse();
-        return new m;
+     return new Mouse();
     }
 }

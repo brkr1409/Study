@@ -3,9 +3,9 @@ public class Cat extends BaseAnimal{
     int position=0;
     int speed = 5;
     double weight = 4;
-
-    public Cat(int pos, int spd, double wght, Animal aml) {
-        super(pos, spd, wght, aml);
+    private Cat(){}
+    public Cat(int Speed, double Weight) {
+        super(Speed, Weight);
     }
 
     public Animal reproduce() {

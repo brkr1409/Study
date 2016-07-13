@@ -10,13 +10,10 @@ abstract class BaseAnimal implements Animal{
         position = 0;
         speed = 0;
         weight = 0;
-        animal = null;
     }
-    public BaseAnimal(int pos, int spd, double wght, Animal aml){
-        position = pos;
+    public BaseAnimal(int spd, double wght){
         speed = spd;
         weight = wght;
-        animal = aml;
     }
 
     @Override
@@ -39,10 +36,10 @@ abstract class BaseAnimal implements Animal{
 
 
     public boolean consume(Animal a) {
-        if(getWeight()<a.getWeight())
+        if(this.weight < a.getWeight())
             return false;
-        else if (getWeight()>a.getWeight())
+        else
             weight += (a.getWeight() * 0.2);
-        return  true;
+            return  true;
     }
 }
