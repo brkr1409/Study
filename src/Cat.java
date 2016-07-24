@@ -1,11 +1,15 @@
 
-public class Cat extends BaseAnimal {
+public class Cat extends BaseAnimal implements Predator, Animal {
 
     int position=0;
     int speed = 5;
     double weight = 4;
 
-    private Cat(){}
+    public Cat(){}
+
+    public int move(){
+        return position+=speed;
+    }
 
     public Cat(int Speed, double Weight) {
         super(Speed, Weight);
@@ -13,6 +17,16 @@ public class Cat extends BaseAnimal {
 
     public Animal reproduce() {
         return new Cat();
+    }
+
+    @Override
+    public double getWeight() {
+        return weight;
+    }
+
+    @Override
+    public int getPosition() {
+        return position;
     }
 
     public boolean consume(Animal a) {

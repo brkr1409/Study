@@ -1,5 +1,5 @@
 
-public interface Predator {
+public interface Predator extends Animal{
 
     boolean consume(Animal a);
 

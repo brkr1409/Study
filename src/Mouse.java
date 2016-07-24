@@ -5,7 +5,7 @@ public class Mouse extends BaseAnimal {
     int speed = 2;
     double weight = 2;
 
-    private Mouse(){}
+    public Mouse(){}
 
     public Mouse(int Speed, double Weight) {
         super(Speed, Weight);

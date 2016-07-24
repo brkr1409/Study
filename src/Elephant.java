@@ -5,7 +5,7 @@ public class Elephant extends BaseAnimal {
     int speed = 3;
     double weight = 20;
 
-    private Elephant(){}
+    public Elephant(){}
 
     public Elephant(int Speed, double Weight) {
         super(Speed, Weight);

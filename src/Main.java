@@ -47,7 +47,7 @@ public class Main {
         Assert.isTrue(originWeight == predator.getWeight(), "Predator's weight must be not changed on fail consumption");
     }
 
-    private static Animal createVictim(final int weight) {
+    private static Animal createVictim(final double weight) {
         return new Animal() {
             @Override
             public int move() {

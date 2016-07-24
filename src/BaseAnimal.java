@@ -1,5 +1,5 @@
 
-public abstract class BaseAnimal implements Animal{
+public abstract class BaseAnimal implements Animal, Predator{
 
     private int position;
     private int speed;
