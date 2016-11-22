@@ -43,7 +43,7 @@ public class Main {
     private static void testPredatorFailConsumption(Predator predator) {
         double originWeight = predator.getWeight();
         boolean result = predator.consume(createVictim(originWeight * 1.1));
-        Assert.isTrue(result, "Predator can't consume victim with weigh greater than predator");
+        Assert.isTrue(!result, "Predator can't consume victim with weigh greater than predator");
         Assert.isTrue(originWeight == predator.getWeight(), "Predator's weight must be not changed on fail consumption");
     }
 
