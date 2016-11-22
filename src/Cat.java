@@ -5,7 +5,8 @@ public class Cat extends BaseAnimal implements Predator, Animal {
     int speed = 5;
     double weight = 4;
 
-    public Cat(){}
+    public Cat(){
+    }
 
     public int move(){
         return position+=speed;

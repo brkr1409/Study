@@ -1,5 +1,5 @@
 
-public class Elephant extends BaseAnimal {
+public class Elephant extends BaseAnimal implements Animal {
 
     int position=0;
     int speed = 3;
@@ -9,6 +9,20 @@ public class Elephant extends BaseAnimal {
 
     public Elephant(int Speed, double Weight) {
         super(Speed, Weight);
+    }
+
+    public int move(){
+        return position+=speed;
+    }
+
+    @Override
+    public double getWeight(){
+        return weight;
+    }
+
+    @Override
+    public int getPosition(){
+        return  position;
     }
 
     public Animal reproduce() {
