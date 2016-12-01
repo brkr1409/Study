@@ -390,10 +390,10 @@ public abstract class Assert {
         try {
             callback.call();
         } catch (Exception e) {
-            Assert.isInstanceOf(expected, e, "Wrapped callback must throw exception " + expected + " but " + e.getClass() + " was caught.");
+            Assert.isInstanceOf(expected, e, "Wrapped callback must throw " + expected.getName() + " but " + e.getClass().getName() + " was caught.");
             return;
         }
-        state(false, "Wrapped callback must throw exception " + expected + " but nothing was thrown.");
+        state(false, "Wrapped callback must throw " + expected.getName() + " but nothing was thrown.");
     }
 
 }
